@@ -5,11 +5,13 @@ import { actionTypes } from '../../store/actionTypes';
 function InputForm(props) {
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
-    const [peopleData,setPeopleData] = useState({ppName:'',ppAge:''})
+    // const [peopleData,setPeopleData] = useState({ppName:'',ppAge:''})
 
     const onClickSubmit = () => {
-        setPeopleData({ppName:name,ppAge:age})
-        props.submitNameData(peopleData);
+        // setPeopleData({ppName:name,ppAge:age})
+        // props.submitData(peopleData);
+        props.submitNameData(name);
+        props.submitAgeData(age);
         props.clearInput();
 
     }
@@ -26,7 +28,9 @@ function InputForm(props) {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        submitNameData: (value) => dispatch({ type: actionTypes.SUBMIT_DATA,value }),
+        // submitData: (value) => dispatch({ type: actionTypes.SUBMIT_DATA,value }),
+        submitNameData: (value) => dispatch({ type: actionTypes.SUBMIT_NAME_DATA,value }),
+        submitAgeData: (value) => dispatch({ type: actionTypes.SUBMIT_AGE_DATA,value }),
         clearInput: () => dispatch({ type: actionTypes.CLEAR_INPUT })
     }
 }

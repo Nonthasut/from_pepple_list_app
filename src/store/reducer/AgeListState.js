@@ -1,16 +1,17 @@
 import { actionTypes } from '../actionTypes'
 
-const initialState = {
-    // peopleList : [],
-    peopleNameList: [],
+const initialState = {   
     peopleAgeList:[]
 }
 
 const reducer = (state = initialState, action) => {
-if(action.type===actionTypes.SUBMIT_DATA){
+
+
+
+if(action.type===actionTypes.SUBMIT_AGE_DATA){
 return{
     ...state,
-    peopleList: [...state.peopleList, action.value]
+    peopleAgeList: [...state.peopleAgeList, action.value]
 }
 }
 

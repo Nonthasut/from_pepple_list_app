@@ -1,6 +1,6 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {actionTypes} from '../store/actionTypes'
+// import {connect} from 'react-redux'
+// import {actionTypes} from '../store/actionTypes'
 import InputForm from '../components/headerField/InputForm'
 import ListForm from '../components/listField/ListForm'
 
