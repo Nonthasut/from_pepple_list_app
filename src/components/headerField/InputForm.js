@@ -9,8 +9,8 @@ function InputForm(props) {
 
     const onClickSubmit = () => {
         setPeopleData({ppName:name,ppAge:age})
-        props.SUBMIT_NAME_DATA(peopleData);
-        props.CLEAR_INPUT();
+        props.submitNameData(peopleData);
+        props.clearInput();
 
     }
 
